@@ -1,0 +1,16 @@
+﻿<div class="container login">
+	<heading text="{{heading}}"></heading>
+	<form novalidate (ngSubmit)="submit(login)" [formGroup]="login">
+	  <div class="form-group row">
+	  	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+      		<input id="login-username-input" type="text" formControlName="username" placeholder="Username" class="form-control input-lg" />
+      	</div>
+      </div>	
+      <div class="form-group row">
+      	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+      		<input id="login-password-input" type="password" formControlName="password" placeholder="Password" class="form-control input-lg" />
+      	</div>
+      </div>
+      <button id="login-submit-button" type="submit" [disabled]="login.invalid" class="btn btn-lg">Login</button>
+	</form>
+</div>
